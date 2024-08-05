@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    {% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+    {% endblock %}
+    {% endblock %}
+</head>
+<body>
+    <div class="header">
+        {% block header %}
+        {% endblock %}
+    </div>
+    <div class="main">
+        {% block main %}
+        {% endblock %}
+    </div>
+    <div class="footer">
+        {% block footer %}
+        <div>@in7hesky Ltd.</div>
+        {% endblock %}
+    </div>
+</body>
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+{% endblock %}
+
+</html>

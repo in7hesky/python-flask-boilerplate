@@ -1,0 +1,1 @@
+console.log("run main script")
