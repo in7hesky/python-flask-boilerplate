@@ -5,8 +5,10 @@
 {% endblock %}
 
 {% block main %}
-<h2>Your value: {{data.random_integer}}</h2>
-<h2>Visits counter: {{data.visits_counter.increment()}}</h2>
+<div class="container-fluid row text-center">
+    <h2 class="col">Your value: {{data.random_integer}}</h2>
+    <h2 class="col">Visits counter: {{data.visits_counter.increment()}}</h2> 
+</div>
 {% endblock %}
 
 {% block scripts %}
