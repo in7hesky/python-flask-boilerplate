@@ -1,2 +1,8 @@
 [default]
 USERNAME = "in7hesky"
+FLASK_DEBUG = false
+
+[development]
+EXTENSIONS = ["flask_debugtoolbar:DebugToolbarExtension"]
+FLASK_DEBUG = true
+DEBUG_TB_ENABLED = true
