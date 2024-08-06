@@ -1,6 +1,6 @@
 {% set nav_items = [
-    {"name": "Home", "link": ""},
-    {"name": "About", "link": ""}
+    {"name": "Home", "link": "info_bp.home"},
+    {"name": "About", "link": "info_bp.about"}
     ] 
 %}
 <!DOCTYPE html>
@@ -29,8 +29,13 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                  <li><a href="/" class="nav-link active">Home</a></li>
-                  <li><a href="/" class="nav-link">About</a></li>
+                  {% for item in nav_items %}
+                    {% if request.endpoint == item.link %}
+                    <li><a class="nav-link active text-decoration-underline" href="{{ url_for(item.link) }}">{{ item.name }}</a></li>
+                    {% else %}
+                    <li><a class="nav-link" href="{{ url_for(item.link) }}">{{ item.name }}</a></li>
+                    {% endif %}
+                  {% endfor %}
                 </ul>
               </div>
             </div>
