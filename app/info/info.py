@@ -10,6 +10,10 @@ def home():
                         "visits_counter": VisitsCounter(),
                         })
 
+@info_bp.route("/about")
+def about():
+    return render_template("about.html")
+
 class VisitsCounter:
     COUNT = 0
     
