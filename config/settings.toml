@@ -1,5 +1,4 @@
 [default]
-USERNAME = "in7hesky"
 FLASK_DEBUG = false
 SQLALCHEMY_DATABASE_URI = "sqlite:///site.db"
 
@@ -7,3 +6,4 @@ SQLALCHEMY_DATABASE_URI = "sqlite:///site.db"
 EXTENSIONS = ["flask_debugtoolbar:DebugToolbarExtension"]
 FLASK_DEBUG = true
 DEBUG_TB_ENABLED = true
+SQLALCHEMY_RECORD_QUERIES = true
