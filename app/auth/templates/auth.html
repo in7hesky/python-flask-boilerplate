@@ -3,8 +3,8 @@
 {% block main %}
 <form class="mt-3" method="POST" action="">
     {{ form.hidden_tag() }}
-    {{ form.username(class_='form-control w-25 mb-2') }}
-    {{ form.password(class_='form-control w-25 mb-2') }}
+    {{ form.username(class_='input form-control w-25 mb-2') }}
+    {{ form.password(class_='input form-control w-25 mb-2') }}
     {{ form.submit(class_='btn btn-primary mb-2') }}  
 </form>
 {% endblock %}
