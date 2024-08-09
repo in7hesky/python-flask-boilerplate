@@ -5,9 +5,9 @@ from .forms import LoginForm, RegisterForm
 @auth_bp.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
-    return "LoginPage"
+    return render_template("login.html", form=form)
 
 @auth_bp.route("/register", methods=["GET", "POST"])
 def register():
     form = RegisterForm()
-    return "RegisterPage"
+    return render_template("register.html", form=form)

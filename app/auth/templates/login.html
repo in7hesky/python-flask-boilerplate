@@ -1,0 +1,9 @@
+{% extends "auth.html" %}
+
+{% block main %}
+{{super()}}
+<p>
+    Don't have an account? Click <a href="{{url_for('auth_bp.register')}}">here</a> to register.
+</p>
+{% endblock %}
+
