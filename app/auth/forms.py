@@ -2,6 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from ..models import User
+from flask import flash
 
 MIN_LENGTH = 4
 MAX_LENGTH = 20
@@ -30,7 +31,9 @@ class RegisterForm(FlaskForm):
             username=username.data).first()
         
         if existing_user_username:
-            raise ValidationError("Username already registered.")
+            error_message="Username already registered."
+            flash(error_message)
+            raise ValidationError(error_message)
         
 class LoginForm(FlaskForm):
     username = StringField(
