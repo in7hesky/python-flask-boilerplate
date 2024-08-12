@@ -7,3 +7,4 @@ EXTENSIONS = ["flask_debugtoolbar:DebugToolbarExtension"]
 FLASK_DEBUG = true
 DEBUG_TB_ENABLED = true
 SQLALCHEMY_RECORD_QUERIES = true
+DEBUG_TB_INTERCEPT_REDIRECTS = false

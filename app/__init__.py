@@ -3,16 +3,18 @@ from dynaconf import FlaskDynaconf
 import os
 from flask import send_from_directory
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 
 db = SQLAlchemy()
+bcrypt = Bcrypt()
 
 def create_app():
     app = Flask(__name__)
-
     
     with app.app_context():
         FlaskDynaconf(extensions_list=True).init_app(app)
         db.init_app(app)
+        bcrypt.init_app(app)
         
         app.config.SECRET_KEY = bytearray(app.config.SECRET_KEY, "UTF-8")
         
