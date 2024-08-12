@@ -2,8 +2,7 @@
 
 This is an example of some boilerplate code which can be used as a base for creating flask web apps.
 
-It supports flask's blueprints, dynamic configuration for different environments of choice and provides
-an implementation of basic authentication system.
+It supports flask's blueprints, dynamic configuration for different environments of choice and provides an implementation of basic authentication system.
 
 The development environment is preconfigured to run debug toolbar extension by default.
 
