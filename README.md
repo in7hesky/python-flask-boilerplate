@@ -16,8 +16,10 @@ List of main tools and libraries used:
 - bootstrap5
 - bcrypt
 
+You can run the app in a docker container using `Dockerfile` provided or proceed with the instructions below to set it up by yourself.
 ## Prerequisites
-The app was built using `python 3.10.3`. You can install python manually or use pyenv so it will autodetect python's version.
+
+Install python manually or let it be chosen by [pyenv](https://github.com/pyenv/pyenv) if you've got one (see `.python-version` file).
 
 After that you just run:
 ```
@@ -35,7 +37,14 @@ You'll also need to set a `SECRET_KEY`. You may place it inside `config` folder 
 [default]
 SECRET_KEY="SOME_SECRET_SEQUENCE_HERE"
 ```
-Now you should be able to run the app using `flask run` command in your terminal.
+Now you just casually run the app with the command below:
+```
+flask run
+```
+If you wish to access your app with some other device by **LAN**, you may need to include an option for that feature:
+```
+flask run --host=0.0.0.0
+```
 
 ## Running the app
 
@@ -43,8 +52,8 @@ After the app has started, the sqlite database file is created (`instance` folde
 
 You may open your browser and get to the app's homepage using `127.0.0.1:5000` ip address (default port).
 
+To access the app via other device by **LAN**, you should use the host's local ip address (`192.168.*.*`).
+
 The authentication pages are located on `/register` and `/login` endpoints.
 
-*This auth system was built for learning purposes. Though it provides data validation, it doesn't consider the requests amount.
-Therefore the app should not be hosted publicly in it's native state.*
-
+*The auth system was built for learning purposes. Though it implements some data validation, the app by no means is considered ready to be hosted publicly.*
